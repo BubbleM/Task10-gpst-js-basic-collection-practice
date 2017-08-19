@@ -1,13 +1,7 @@
 'use strict';
 
 function includes(collection, ch) {
-    for (let item of collection) {
-        if (item === ch) {
-            return true;
-        }
-    }
-
-    return false;
+    return collection.includes(ch);
 }
 
 module.exports = function createUpdatedCollection(collectionA, objectB) {
@@ -20,5 +14,6 @@ module.exports = function createUpdatedCollection(collectionA, objectB) {
         }
         result.push({key, count});
     }
+
     return result;
 }
