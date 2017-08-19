@@ -1,13 +1,7 @@
 'use strict';
 
 function find(collection, ch) {
-    for (let item of collection) {
-        if (item.key === ch) {
-            return item;
-        }
-    }
-
-    return null;
+    return collection.find(item => item.key === ch);
 }
 
 function summarize(collection) {
@@ -24,13 +18,7 @@ function summarize(collection) {
 }
 
 function includes(collection, ch) {
-    for (let item of collection) {
-        if (item === ch) {
-            return true;
-        }
-    }
-
-    return false;
+    return collection.includes(ch);
 }
 
 function discount(collection, promotionItems) {
